@@ -91,6 +91,6 @@ tusic/
 - [x] Grid Layout
 - [x] Local SQLite History & Playlists
 - [x] Dynamic "Made For You" Curation
-- [ ] Pywal Color Injection
+- [x] Pywal Color Injection
 - [ ] Auto-play functionality (play next song in table when current finishes)
 

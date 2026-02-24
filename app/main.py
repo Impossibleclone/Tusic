@@ -114,6 +114,11 @@ class TusicApp(App):
     def on_mount(self) -> None:
         primary_color = self.pywal_colors.get("color6", "#B5EAD7")
 
+        if not self.pywal_colors:
+            self.notify("Pywal cache not found! Using fallback.", severity="warning")
+        else:
+            self.notify(f"Pywal loaded! Using hex: {primary_color}", severity="information")
+
         for element_id in ["#sidebar", "#main_content", "#player_bar", "#search_input", "#help_box"]:
             self.query_one(element_id).styles.border = ("solid", primary_color)
 

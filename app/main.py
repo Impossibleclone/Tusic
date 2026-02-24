@@ -196,7 +196,9 @@ class TusicApp(App):
         try:
             row_key = table.coordinate_to_cell_key(table.cursor_coordinate).row_key
             row_data = table.get_row(row_key)
-            video_id = row_key.value
+            
+            # Extract the pure video ID
+            video_id = row_key.value.split("||")[0]
             
             self.db.add_to_playlist(video_id, row_data[0], row_data[1], row_data[3])
             self.notify(f"Saved: {row_data[0]}")
@@ -223,17 +225,21 @@ class TusicApp(App):
         table = self.query_one("#songs_table")
         table.clear()
 
-        for song in results:
+        for idx, song in enumerate(results):
+            unique_key = f"{song['id']}||{idx}"
+            
             table.add_row(
                 song['title'], 
                 song['artist'], 
                 "Unknown", 
                 song['duration'], 
-                key=song['id'] 
+                key=unique_key 
             )
 
     def on_data_table_row_selected(self, event: DataTable.RowSelected) -> None:
-        video_id = event.row_key.value
+        # Extract the hidden video ID from our unique key (everything before ||)
+        video_id = event.row_key.value.split("||")[0]
+        
         row_data = self.query_one("#songs_table").get_row(event.row_key)
         song_title = f"{row_data[0]} - {row_data[1]}"
         self.current_track = song_title

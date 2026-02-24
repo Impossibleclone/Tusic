@@ -1,17 +1,114 @@
 Screen {
-    layout: vertical;
+    background: #000000;
+}
+
+#main_grid {
+    grid-size: 4 3;
+    grid-rows: 3 1fr 4;
+    grid-columns: 1fr 1fr 1fr 1fr;
+    background: #000000;
+}
+
+#top_bar {
+    column-span: 4;
+    height: 3;
 }
 
 #search_input {
-    dock: bottom;
-    display: none;
+    width: 1fr;
+    background: #000000;
 }
 
-#search_input.-active {
-    display: block;
+#search_input:focus {
+    background: #111111;
 }
 
-#track_list {
-    height: 1fr;
-    border: solid lavender;
+#help_box {
+    width: 15;
+    content-align: center middle;
+    background: #000000;
+}
+
+#sidebar {
+    row-span: 1;
+    column-span: 1;
+    padding: 0 1;
+    background: #000000;
+}
+
+#library_menu {
+    background: #000000;
+    border: none;
+}
+
+#main_content {
+    row-span: 1;
+    column-span: 3;
+    background: #000000;
+}
+
+DataTable {
+    height: 100%;
+    background: #000000;
+}
+
+DataTable > .datatable--header {
+    background: #000000;
+    color: #FFB7B2;
+    text-style: bold;
+}
+
+DataTable > .datatable--cursor {
+    background: #E2F0CB 20%;
+    color: auto;
+}
+
+#player_bar {
+    column-span: 4;
+    height: 4;
+    padding: 0 1;
+    background: #000000;
+}
+
+ProgressBar {
+    width: 100%;
+    margin-top: 1;
+    background: #000000;
+}
+
+HelpScreen {
+    align: center middle;
+    background: #000000 70%;
+}
+
+#help_dialog {
+    grid-size: 1 8;
+    width: 60;
+    height: 22;
+    background: #000000;
+    padding: 1 2;
+}
+
+#help_title {
+    content-align: center middle;
+    text-style: bold;
+    width: 100%;
+    margin-bottom: 1;
+    color: #FFDAC1;
+}
+
+.help_header {
+    text-style: bold italic;
+    margin-top: 1;
+    color: #B5EAD7;
+}
+
+.help_text {
+    margin-left: 2;
+}
+
+#help_footer {
+    content-align: center middle;
+    width: 100%;
+    color: $text-muted;
 }

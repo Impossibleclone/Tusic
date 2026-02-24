@@ -4,6 +4,10 @@ A lightning-fast, Vim-driven Terminal User Interface (TUI) for streaming YouTube
 
 Built with Python and the [Textual](https://textual.textualize.io/) framework, Tusic strips away the bloat of modern electron apps, giving you a clean, keyboard-centric grid layout with dynamic styling that respects your system's Pywal colors.
 
+![Project Screenshot](./ss/playing.png)
+![Project Screenshot](./ss/playing.png)
+![Project Screenshot](./ss/helpscreen.png)
+
 ## Features
 
 * **Vim-Native Navigation:** Keep your hands on the home row. Navigate panes, scroll lists, and search entirely via standard Vim keybindings (`h`, `j`, `k`, `l`, `/`).

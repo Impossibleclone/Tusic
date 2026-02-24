@@ -1,1 +1,2 @@
-## Tusic - A Music Streamer for the Terminal
+## Tusic 
+ - A Music Streamer for the Terminal

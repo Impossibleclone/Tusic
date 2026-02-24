@@ -1,0 +1,17 @@
+Screen {
+    layout: vertical;
+}
+
+#search_input {
+    dock: bottom;
+    display: none;
+}
+
+#search_input.-active {
+    display: block;
+}
+
+#track_list {
+    height: 1fr;
+    border: solid lavender;
+}

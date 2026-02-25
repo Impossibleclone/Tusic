@@ -4,7 +4,7 @@ A lightning-fast, Vim-driven Terminal User Interface (TUI) for streaming Music.
 
 Built with Python and the [Textual](https://textual.textualize.io/) framework, Tusic strips away the bloat of modern electron apps, giving you a clean, keyboard-centric grid layout with dynamic styling that respects your system's Pywal colors.
 
-![Project Screenshot](./ss/playing.png)
+![Project Screenshot](./ss/startup.png)
 
 ![Project Screenshot](./ss/playing.png)
 

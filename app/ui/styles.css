@@ -7,6 +7,7 @@ Screen {
     grid-rows: 3 1fr 4;
     grid-columns: 1fr 1fr 1fr 1fr;
     background: #000000;
+    height: 100%;
 }
 
 #top_bar {
@@ -34,32 +35,43 @@ Screen {
     column-span: 1;
     padding: 0 1;
     background: #000000;
+    height: 100%;
 }
 
 #library_menu {
     background: #000000;
     border: none;
+    height: 100%;
 }
 
+/* Hard 100% dimensions stop the collapse bug */
 #main_content {
     row-span: 1;
     column-span: 3;
     background: #000000;
+    height: 100%;
+    width: 100%;
+}
+
+ContentSwitcher {
+    height: 100%;
+    width: 100%;
 }
 
 DataTable {
     height: 100%;
+    width: 100%;
     background: #000000;
 }
 
 DataTable > .datatable--header {
     background: #000000;
-    color: #FFB7B2;
+    color: #FFFFFF;
     text-style: bold;
 }
 
 DataTable > .datatable--cursor {
-    background: #E2F0CB 20%;
+    background: #333333;
     color: auto;
 }
 
@@ -76,39 +88,45 @@ ProgressBar {
     background: #000000;
 }
 
+/* --- Help Modal Styling --- */
 HelpScreen {
     align: center middle;
     background: #000000 70%;
 }
 
 #help_dialog {
-    grid-size: 1 8;
-    width: 60;
-    height: 22;
+    layout: vertical;    /* Stacks elements naturally */
+    width: 65;           /* Slightly wider for multi-line text */
+    height: auto;          /* Fixed height is safer for Modals */
     background: #000000;
     padding: 1 2;
+    border: double #B5EAD7; 
 }
 
 #help_title {
     content-align: center middle;
-    text-style: bold;
+    text-style: bold underline;
     width: 100%;
     margin-bottom: 1;
-    color: #FFDAC1;
 }
 
 .help_header {
     text-style: bold italic;
     margin-top: 1;
     color: #B5EAD7;
+    width: 100%;
 }
 
 .help_text {
-    margin-left: 2;
+    width: 100%;
+    height: auto;        /* Allows the label to take up as many lines as needed */
+    color: #EEEEEE;
+    margin-bottom: 1;
 }
 
 #help_footer {
     content-align: center middle;
     width: 100%;
-    color: $text-muted;
+    margin-top: 1;
+    text-style: italic;
 }

@@ -64,12 +64,16 @@ Tusic is designed to be used entirely without a mouse.
 | :--- | :--- | :--- |
 | `h` | Focus Left (Library Pane) | Normal Mode |
 | `l` | Focus Right (Songs Table) | Normal Mode |
+| `H` | Focus Left (Search Results) | Up Next Table |
+| `L` | Focus Right (Up Next Table) | Search Results |
 | `j` | Move Cursor Down | Normal Mode |
 | `k` | Move Cursor Up | Normal Mode |
 | `/` | Focus Search Bar | Normal Mode |
 | `Enter` | Play Selected Track / Submit Search | Normal/Search Mode |
 | `Space` | Play / Pause Audio | Global |
 | `s` | Save Song to Local Playlist | Focused on Songs Table |
+| `d` | Delete Song from Local Playlist | Focused on Songs Table |
+| `r` | Refresh Recommendations | Normal Mode |
 | `?` | Toggle Help Menu | Global |
 | `Esc` | Unfocus Search / Close Help | Search/Help Mode |
 | `q` | Quit Tusic | Global |
@@ -96,5 +100,7 @@ tusic/
 - [x] Local SQLite History & Playlists
 - [x] Dynamic "Made For You" Curation
 - [x] Pywal Color Injection
-- [ ] Auto-play functionality (play next song in table when current finishes)
-
+- [x] Timestamps can be seen
+- [x] Windows for search results and song recommendations to play next in "Up Next".
+- [x] Auto-play functionality (play next song from "Up Next" when current finishes)
+- [ ] going back and forward in song timeline.

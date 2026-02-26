@@ -21,7 +21,7 @@ Screen {
 }
 
 #search_input:focus {
-    background: #111111;
+    background: transparent;
 }
 
 #help_box {

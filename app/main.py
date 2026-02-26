@@ -113,7 +113,7 @@ class TusicApp(App):
         with Grid(id="main_grid"):
             with Horizontal(id="top_bar"):
                 yield Input(placeholder="Search Tusic...", id="search_input")
-                yield Label("Help\nType ?", id="help_box")
+                yield Label("? : Help", id="help_box")
             
             with Vertical(id="sidebar"):
                 yield OptionList("Made For You", "Recently Played", "My Playlist", id="library_menu")

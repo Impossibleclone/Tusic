@@ -124,7 +124,7 @@ class TusicApp(App):
                     yield DataTable(id="up_next_table", cursor_type="row")
 
             with Vertical(id="player_bar"):
-                yield Label("🎵 Nothing playing", id="track_info")
+                yield Label("Nothing playing", id="track_info")
                 yield ProgressBar(total=100, show_eta=False, id="progress_bar")
 
     def on_mount(self) -> None:

@@ -36,7 +36,7 @@ class HelpScreen(ModalScreen):
             yield Label("h / l : Focus Sidebar / Songs\nH / L : View Search / View Up Next\nj / k : Move up / down", classes="help_text")
             
             yield Label(" Playback ", classes="help_header")
-            yield Label("Space : Play / Pause\nn : Next Track\n+ / - : Volume Control", classes="help_text")
+            yield Label("Space : Play / Pause\nn : Next Track", classes="help_text")
             
             yield Label(" General ", classes="help_header")
             yield Label("/ : Search\ns : Save to Playlist\nd : Delete from Playlist\nr : Refresh Recommendations", classes="help_text")
